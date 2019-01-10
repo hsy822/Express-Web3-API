@@ -1,0 +1,207 @@
+{
+	"variables": [],
+	"info": {
+		"name": "mandarin",
+		"_postman_id": "526eb64a-49d8-8b41-19e7-5c63b26bb21e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "사용자 전체 조회",
+			"request": {
+				"url": "http://ec2-18-237-77-85.us-west-2.compute.amazonaws.com:8011/api/accounts",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "from",
+							"value": "0xb3fcdc1b9b56a88ea561c5cf80224cb2d2803b9f",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "0x9ea397767cb9a891a00fe83d0274f28dcaa164ac",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "1000",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyQWNjb3VudCI6IjB4YjNmY2RjMWI5YjU2YTg4ZWE1NjFjNWNmODAyMjRjYjJkMjgwM2I5ZiIsInVzZXJQYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE1Mzk3NTQwNTAsImV4cCI6MTU0MDM1ODg1MH0.xnsjdBu2R8KDpCt0zwc4DNSjauCMtoLYjnzsHFDJ-2E",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "토큰키발급",
+			"request": {
+				"url": "http://ec2-18-237-77-85.us-west-2.compute.amazonaws.com:8011/api/newtoken",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "account",
+							"value": "0x21258ebb4bbf7622900fc81485d9bfa42e96d119",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "authentication",
+							"value": "haveaniceday",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "지갑생성",
+			"request": {
+				"url": "http://ec2-18-237-77-85.us-west-2.compute.amazonaws.com:8011/api/newaccount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "1234",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyQWNjb3VudCI6IjB4MjEyNThlYmI0YmJmNzYyMjkwMGZjODE0ODVkOWJmYTQyZTk2ZDExOSIsInVzZXJQYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE1Mzk3NjYzMzIsImV4cCI6MTU0MDM3MTEzMn0.QQ0gTkkO0FLVCT6O84NfMrXPEDwNcC6tgtVmjSx9Eb4",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "마이너 계정 조회",
+			"request": {
+				"url": "http://ec2-18-237-77-85.us-west-2.compute.amazonaws.com:8011/api/defaultaccount",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "사용자 잔액 조회",
+			"request": {
+				"url": "http://ec2-18-237-77-85.us-west-2.compute.amazonaws.com:8011/api/balance/0x21258ebb4bbf7622900fc81485d9bfa42e96d119",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "송금",
+			"request": {
+				"url": "http://ec2-18-237-77-85.us-west-2.compute.amazonaws.com:8011/api/transfer/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "from",
+							"value": "0x21258ebb4bbf7622900fc81485d9bfa42e96d119",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "0x314622bc063b3a41afca58ca68fa2b7b328aa3bc",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "500",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyQWNjb3VudCI6IjB4MjEyNThlYmI0YmJmNzYyMjkwMGZjODE0ODVkOWJmYTQyZTk2ZDExOSIsInVzZXJQYXNzd29yZCI6IjEyMzQiLCJpYXQiOjE1Mzk3NjcyMzYsImV4cCI6MTU0MDM3MjAzNn0.CnZGf1_cvY7O_0WT-Pp2TuhQ6vBYlQlpGZNuwzDSKK8",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
